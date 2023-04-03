@@ -1,0 +1,35 @@
+.h1{
+    color: rgb(35, 12, 165);
+    font-size: 40px;
+    font-family: cursive;
+    font-weight: bolder; 
+}
+.toolbar{
+    background-color: rgb(65, 174, 194);
+    color: black;
+    font-size: larger;
+    width: 20%;
+}
+.toolbar > a{
+            color: rgb(42, 54, 165);
+            text-decoration: none;
+}
+
+.post{
+    float: left;
+    padding: 20px;
+}
+
+
+.main{
+    display: flex;
+    width: 100%;
+}
+.picbar{
+    text-align: center;
+    width: 70%;
+}
+.avatar{
+    border-radius:50% ;
+    clip-path: circle();
+}
