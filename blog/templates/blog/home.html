@@ -2,28 +2,11 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-<div class='main'>
-    <div class='toolbar'>
-        <div class='h1'>Fotoblog</div>
-        <div><h2>{{user|upper}}</h2></div>
-        <div> 
-        {% if user.profile_photo%}
-        <img class="avatar" src={{ user.profile_photo.url }} width=200>
-        {% else %}
-        <img class="avatar" src="{% static 'images/default_profile.png' %}" width=200>
-        {% endif %}
-        </div>
-        <div><a href="{% url 'signup' %}">Sign Up</a></div>
-        <div><a href="{% url 'logout' %}">Logout</a></div>
-        <div><a href="{% url 'photo_upload' %}">New Upload+</a></div>
-        <div><a href="{% url 'upload_profile_photo' %}">Change Profile Picture</a></div>
-    </div>
-    <div class='picbar'>  
+ 
     <h2>{{user|capfirst}}'s Photos</h2>
     {% for photo in photos %}
            <span class='post'> <img src="{{ photo.image.url }}" width=300>
             <p>{{ photo.caption }}</p></span>
         {% endfor %}
-    </div>
-</div>
+    
 {% endblock %}

@@ -37,7 +37,9 @@ urlpatterns = [
          name='password_change_done'),
     path('signup/', authentication.views.signup_page, name='signup'),
     path('photo/upload/', blog.views.photo_upload, name='photo_upload'),
-    path('profile-photo/upload', authentication.views.upload_profile_photo, name='upload_profile_photo')
+    path('profile-photo/upload', authentication.views.upload_profile_photo, name='upload_profile_photo'),
+    path('blog/create', blog.views.blog_and_photo_upload, name='blog_create')
+    
     ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(
         settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
